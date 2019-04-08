@@ -1,3 +1,3 @@
 # dieterdeschrijver.github.io
 
-javascript game: <dieterdeschrijver.github.io>
+javascript game: [https://dieterdeschrijver.github.io/]
