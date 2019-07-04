@@ -49,8 +49,18 @@ function fetchWinRate(){
       return response.json();
     })
     .then(function(myJson) {
-      kaka.wins = myJson[0].wins
-      kaka.losses = myJson[0].losses
+
+      if(myJson[0].queueType === 'RANKED_FLEX_SR'){
+        kaka.wins = myJson[1].wins
+        kaka.losses = myJson[1].losses
+      }else{
+        kaka.wins = myJson[0].wins
+        kaka.losses = myJson[0].losses
+      }
+
+
+
+      
       console.log(kaka)
         kaka.calcWinrate();
         kaka.printWinrate();
