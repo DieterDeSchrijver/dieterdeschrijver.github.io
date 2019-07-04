@@ -69,7 +69,7 @@ function fetchWinRate(){
 }
 
 function displayWinrate(){
-    document.getElementById("winrate").innerHTML = `${kaka.winrate}%`;
+    document.getElementById("winrate").innerHTML = `winrate: ${kaka.winrate}%`;
 }
 
 
