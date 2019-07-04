@@ -31,7 +31,7 @@ class Summoner{
 
 
 
-fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonersName}?api_key=RGAPI-76601c73-9cb5-4b68-889b-7da9661fe1fd`)
+fetch(`https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonersName}?api_key=RGAPI-76601c73-9cb5-4b68-889b-7da9661fe1fd`)
   .then(function(response) {
     return response.json();
   })
@@ -44,7 +44,7 @@ fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summon
   });
 
 function fetchWinRate(){
-    fetch(`https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}?api_key=RGAPI-76601c73-9cb5-4b68-889b-7da9661fe1fd`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}?api_key=RGAPI-76601c73-9cb5-4b68-889b-7da9661fe1fd`)
     .then(function(response) {
       return response.json();
     })
