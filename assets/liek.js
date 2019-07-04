@@ -1,6 +1,6 @@
 let kaka;
 
-let summonersName = prompt("Please enter your summoners name [EUW]", "Chronosite");
+let summonersName = prompt("Please enter your summoners name [EUW]");
 
 let id;
 
