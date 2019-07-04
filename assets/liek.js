@@ -16,7 +16,7 @@ class Summoner{
     }
 
     calcWinrate(){
-        let wr1 = (this.wins / this.losses)/2 * 100
+        let wr1 = this.wins / (this.wins + this.losses)*100
         let wr2 = wr1.toFixed(2)
         this.winrate = wr2
     }
