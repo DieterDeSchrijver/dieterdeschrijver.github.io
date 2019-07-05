@@ -50,7 +50,7 @@ function getSummonerStats(summoners){
 let corsKey = `https://cors-anywhere.herokuapp.com/`
 
 function fetchProfile(summoner){
-    fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summoner}?api_key=RGAPI-76601c73-9cb5-4b68-889b-7da9661fe1fd`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summoner}?api_key=RGAPI-76601c73-9cb5-4b68-889b-7da9661fe1fd`)
     .then(function(response) {
       return response.json();
     })
@@ -63,7 +63,7 @@ function fetchProfile(summoner){
 }
 
   function fetchWinRate(summoner){
-    fetch(`https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summoner.id}?api_key=RGAPI-76601c73-9cb5-4b68-889b-7da9661fe1fd`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summoner.id}?api_key=RGAPI-76601c73-9cb5-4b68-889b-7da9661fe1fd`)
     .then(function(response) {
       return response.json();
     })
