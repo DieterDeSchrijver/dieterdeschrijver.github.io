@@ -4,7 +4,7 @@ let summonersName = prompt("Please enter your summoners name [EUW]");
 
 let id;
 
-
+let apiKeyRiot = `RGAPI-d1a11dfd-39c5-4e59-ac88-ddf5814ba544`
 class Summoner{
     constructor(name, id, accountId){
         this.name = name;
@@ -28,12 +28,12 @@ class Summoner{
 }
 
 
-fetchProfile();
+fetchProfile(summonersName);
 
 
-function fetchProfile(){
+function fetchProfile(summoner){
   console.log('test')
-  fetch(`https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonersName}?api_key=RGAPI-76601c73-9cb5-4b68-889b-7da9661fe1fd`)
+  fetch(`https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summoner}?api_key=${apiKeyRiot}`)
   .then(function(response) {
     return response.json();
   })
@@ -41,14 +41,14 @@ function fetchProfile(){
     kaka = new Summoner(myJson.name, myJson.id, myJson.accountId)
     console.log(kaka)
     id = myJson.id 
-    fetchWinRate();
+    fetchWinRate(kaka);
     
   });
 }
 
 
-function fetchWinRate(){
-    fetch(`https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${kaka.id}?api_key=RGAPI-76601c73-9cb5-4b68-889b-7da9661fe1fd`)
+function fetchWinRate(summoner){
+    fetch(`https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summoner.id}?api_key=${apiKeyRiot}`)
     .then(function(response) {
       return response.json();
     })
