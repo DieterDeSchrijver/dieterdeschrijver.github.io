@@ -1,7 +1,8 @@
 let summoners = ["Chronosite", "Jerichi", "Thebooman", "LitCrit", "Exadice", "Demonic Snake"];
 let counter = 0;
 
-
+let apiKeyRiot = `RGAPI-d1a11dfd-39c5-4e59-ac88-ddf5814ba544`
+let corsKey = `https://cors-anywhere.herokuapp.com/`
 
 let realSummoners = [];
 
@@ -47,10 +48,10 @@ function getSummonerStats(summoners){
       }
 }
 
-let corsKey = `https://cors-anywhere.herokuapp.com/`
+
 
 function fetchProfile(summoner){
-    fetch(`https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summoner}?api_key=RGAPI-76601c73-9cb5-4b68-889b-7da9661fe1fd`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summoner}?api_key=${apiKeyRiot}`)
     .then(function(response) {
       return response.json();
     })
@@ -63,7 +64,7 @@ function fetchProfile(summoner){
 }
 
   function fetchWinRate(summoner){
-    fetch(`https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summoner.id}?api_key=RGAPI-76601c73-9cb5-4b68-889b-7da9661fe1fd`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summoner.id}?api_key=${apiKeyRiot}`)
     .then(function(response) {
       return response.json();
     })
