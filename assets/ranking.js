@@ -1,4 +1,4 @@
-let summoners = ["Chronosite", "Jerichi", "Thebooman", "LitCrit", "Exadice"];
+let summoners = ["Chronosite", "Jerichi", "Thebooman", "LitCrit", "Exadice", "Demonic Snake"];
 let counter = 0;
 
 
