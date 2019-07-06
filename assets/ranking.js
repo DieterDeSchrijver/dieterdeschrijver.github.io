@@ -1,4 +1,4 @@
-let summoners = ["Chronosite", "Jerichi", "Thebooman", "LitCrit", "Exadice", "Demonic Snake"];
+let summoners = ["Chronosite", "Jerichi", "Thebooman", "LitCrit", "Exadice", "Demonic Snake","Filthy Juan", "IMaverick"];
 let counter = 0;
 
 let apiKeyRiot = `RGAPI-d1a11dfd-39c5-4e59-ac88-ddf5814ba544`
